@@ -1,0 +1,176 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background: url("https://assets.codepen.io/6060109/ZigZag.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h5,
+h6,
+.btn-all {
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+.panel {
+  min-width: 310px;
+  width: 350px;
+  height: 590px;
+  margin: 40px 0;
+  background-color: #fff;
+  box-shadow: 0px 40px 40px -20px #3c7b61;
+  border-radius: 5px;
+  position: relative;
+}
+
+.panel.main {
+  z-index: 9;
+  width: 370px;
+}
+
+.panel.left,
+.panel.right {
+  height: 560px;
+  z-index: 1;
+}
+
+.panel.left {
+  margin-right: -18px;
+}
+.panel.right {
+  margin-left: -18px;
+}
+/* Hidden for mobile version  */
+.left,
+.right {
+  display: none;
+}
+
+.icon-close {
+  position: absolute;
+  left: 90%;
+  top: 2%;
+}
+
+.inner-container {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 70px 30px 0px;
+}
+.inner-container > img {
+  width: 100px;
+  height: 100px;
+}
+
+.inner-container > h2 {
+  margin: 20px 0px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 22px;
+  color: #2f463d;
+}
+
+.inner-container > .move-down {
+  padding-top: 25px;
+}
+
+.inner-container > p {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  line-height: 26px;
+  color: #828282;
+}
+
+.food-selection {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  background: #f0fff5;
+  border-radius: 5px;
+}
+
+.food-selection > .food-name-price {
+  text-align: left;
+  width: 50%;
+  padding: 15px 0px 0px 10px;
+}
+
+.food-name-price > h5 {
+  font-weight: 800;
+  color: #2f463d;
+}
+
+.food-name-price > h6 {
+  font-weight: 500;
+  padding-top: 3px;
+  color: #7a8f85;
+}
+
+.food-selection > a {
+  font-weight: 700;
+  margin-top: 24px;
+  color: #467a66;
+  border-radius: 5px;
+}
+
+.btn-all {
+  width: 100%;
+  height: 50px;
+  margin-top: 60px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  background-color: #bdbdbd;
+  box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+  border-radius: 5px;
+  transition: 0.3s ease all;
+}
+.btn-all:hover {
+  opacity: 0.8;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.btn-all.middle {
+  background: #46a67e;
+  box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 40px;
+}
+
+.dots {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  top: 95%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background: #67bd99;
+}
+
+/* Medium devices (landscape tablets, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .left,
+  .right {
+    display: block;
+  }
+}
